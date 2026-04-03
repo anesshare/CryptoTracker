@@ -26,7 +26,7 @@ func addToDB(ime string, cena float64) {
 }
 
 func DBCon() {
-	connString := "postgres://postgres:alpha333@localhost:5432/test"
+	connString := "postgres://postgres:postgres@localhost:5432/test"
 	var err error
 	dbPool, err = pgxpool.New(context.Background(), connString)
 	if err != nil {
